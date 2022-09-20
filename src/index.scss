@@ -1,0 +1,21 @@
+*::after,
+*,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --gray-bg: #dadbd3;
+  --app-bg: #ededed;
+  --main-bg: #00a884;
+  --search-bg: #f6f6f6;
+  --white: #ffffff;
+  --hover-bg: #ebebeb;
+  --msg-bg: #dcf8c6;
+}

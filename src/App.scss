@@ -1,0 +1,25 @@
+.MuiPaper-root {
+  height: 40px;
+  z-index: 1;
+}
+.app {
+  display: grid;
+  place-items: center;
+  background-color: var(--main-bg);
+  height: 100vh;
+
+  .app__body {
+    display: flex;
+    height: 90vh;
+    width: 90vw;
+    background-color: var(--app-bg);
+    box-shadow: -1px 4px 20px -6px rgba(0, 0, 0, 0.6);
+  }
+}
+$breakpoint-tablet: 624px;
+@media (max-width: $breakpoint-tablet) {
+  .app__body {
+    width: 100vw !important;
+    height: 100vh !important;
+  }
+}

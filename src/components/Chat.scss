@@ -1,0 +1,118 @@
+.chat {
+  flex: 0.75;
+  display: flex;
+  flex-direction: column;
+  .chat__header {
+    display: flex;
+    align-items: center;
+    padding: 13px;
+    border-bottom: 1px solid var(--gray-bg);
+    background-color: var(--app-bg);
+    .chat__header--info {
+      flex: 1;
+      padding-left: 20px;
+      h1 {
+        font-size: 0.9rem;
+      }
+      p {
+        font-size: 0.625rem;
+        color: gray;
+      }
+    }
+    .chat__header--icons {
+      display: flex;
+      justify-content: space-between;
+      min-width: 100px;
+      .dropdown {
+        position: relative;
+      }
+  
+      .dropdown__list {
+        display: block;
+        position: absolute;
+        top: 40px;
+        right: 15px;
+        font-size: 0.725rem;
+        z-index: 1;
+      }
+  
+      .hide {
+        display: none;
+      }
+      .dropdown ul {
+        border-radius: 5px;
+        width: 120px;
+        background-color: white;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.12);
+      }
+      .dropdown__list ul li {
+        list-style: none;
+        padding: 10px;
+        cursor: pointer;
+      }
+  
+      .dropdown__list ul li:hover {
+        background-color: #eeeeee;
+      }
+    }
+  }
+  .chat__body {
+    flex: 1;
+    padding: 25px;
+    overflow: auto;
+    background-repeat: repeat;
+    background-position: center;
+    background: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
+
+    .chat__reciever {
+      margin-left: auto;
+      background-color: var(--msg-bg) !important;
+    }
+    .chat__body--message {
+      position: relative;
+      font-size: 0.8rem;
+      padding: 10px;
+      background-color: white;
+      border-radius: 10px;
+      width: fit-content;
+      margin-bottom: 20px;
+      .chat__body__message--name {
+        position: absolute;
+        // left: 0;
+        top: -16px;
+        font-size: 0.635rem;
+        font-weight: 600;
+      }
+      .chat__body__message--time {
+        
+        font-size: 0.435rem;
+        color: gray;
+        font-weight: 600;
+        margin-left: 10px;
+      }
+    }
+  }
+  .chat__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 62px;
+    border-top: 1px solid var(--gray-bg);
+    form {
+      display: flex;
+      flex: 1;
+      input {
+        flex: 1;
+        border-radius: 30px;
+        padding: 10px;
+        border: 2px solid var(--gray-bg);
+        outline: none;
+      }
+      button {
+        outline: none;
+        color: var(--main-bg);
+        border: none;
+      }
+    }
+  }
+}
