@@ -60,14 +60,6 @@ const Chat = ({ removeRoom }) => {
         <Avatar src={`https://avatars.dicebear.com/api/micah/${seed}.svg`} />
         <div className="chat__header--info">
           <h1>{roomName}</h1>
-          <p>
-            {messages.length !== 0
-              ? "Online"
-              : `Last seen at ` +
-                  new Date(
-                    messages[messages.length - 1]?.timestamp?.toDate()
-                  ).toUTCString() || "no chats yet"}
-          </p>
         </div>
         <div className="chat__header--icons">
           <IconButton>

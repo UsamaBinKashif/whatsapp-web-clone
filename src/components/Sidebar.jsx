@@ -92,13 +92,18 @@ const Sidebar = () => {
       <div className="sidebar__search">
         <div className="sidebar__search--container">
           <SearchOutlined />
-          <input type="text" placeholder="Search or start new chat" onChange={(e) => {
+          <input
+            type="text"
+            placeholder="Search or start new chat"
+            onChange={(e) => {
               setSearch(e.target.value);
-            }} value={search}/>
+            }}
+            value={search}
+          />
         </div>
       </div>
       <div className="sidebar__chats">
-      {rooms.map((room) => {
+        {rooms.map((room) => {
           if (
             room.data.name.toLowerCase().includes(search.toLowerCase()) ||
             search === ""
