@@ -53,7 +53,7 @@ Users are able to
 ### Links
 
 - [Solution](https://github.com/UsamaBinKashif/whatsapp-web-clone)
-- [Live Page](https://wwc-usamabinkashif.netlify.app/)
+- [Live Page](https://whatsapp-clone-ubk.firebaseapp.com/)
 
 ## My process
 
@@ -66,9 +66,8 @@ Users are able to
 - [React](https://reactjs.org/) - JS library
 - [Vite](https://vitejs.dev/) - Next Generation Frontend Tooling
 
-- [Firebase](https://firebase.google.com/) - For Backend (Authentication, Database)
+- [Firebase](https://firebase.google.com/) - For Backend (Authentication, Database, Hosting)
 
-- [Netlify](https://www.netlify.com/) - For Hosting
 
 ### What I learned
 
