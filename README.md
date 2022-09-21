@@ -14,7 +14,6 @@ This is a solution to the [WhatsApp Web Clone](https://wwc-usamabinkashif.netlif
 <summary>Table of contents</summary>
 
 - [Overview](#overview)
-  - [The challenge](#things coverd in this built)
   - [Screenshots](#screenshots)
   - [Links](#links)
 - [My process](#my-process)
@@ -25,7 +24,7 @@ This is a solution to the [WhatsApp Web Clone](https://wwc-usamabinkashif.netlif
 
 ## Overview
 
-### things coverd in this built)
+### Things coverd in this built
 
 Users are able to
 
