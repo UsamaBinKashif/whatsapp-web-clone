@@ -3,7 +3,7 @@ import db from "../backend/Firebase";
 import firebase from "firebase/app";
 import { useParams } from "react-router";
 import { useStateValue } from "../context/StateProvider";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Avatar from "@mui/material/Avatar";
 import IconButton from "@mui/material/IconButton";
 import AttachFileIcon from "@mui/icons-material/AttachFile";
@@ -53,13 +53,27 @@ const Chat = ({ removeRoom }) => {
         );
     }
   }, [roomId]);
-
+  const el = useRef(null);
+  useEffect(() => {
+    el.current.scrollIntoView({ block: "end", behavior: "smooth" });
+  });
   return (
     <div className="chat">
       <div className="chat__header">
         <Avatar src={`https://avatars.dicebear.com/api/micah/${seed}.svg`} />
         <div className="chat__header--info">
           <h1>{roomName}</h1>
+          <p>
+            {messages.length !== 0
+              ? `Last seen at ` +
+                new Date(
+                  messages[messages.length - 1]?.timestamp?.toDate()
+                ).toLocaleTimeString()
+              : ""}{" "}
+            {new Date(
+              messages[messages.length - 1]?.timestamp?.toDate()
+            ).toLocaleDateString()}
+          </p>
         </div>
         <div className="chat__header--icons">
           <IconButton>
@@ -107,7 +121,7 @@ const Chat = ({ removeRoom }) => {
               }`}
             >
               <span className="chat__body__message--name">{message.name}</span>
-              {message.message[0].toUpperCase() + message.message.substring(1)}
+              {message.message}
               <span className="chat__body__message--time">
                 {new Date(message.timestamp?.toDate()).toLocaleTimeString()}{" "}
                 {new Date(message.timestamp?.toDate()).toLocaleDateString()}
@@ -115,6 +129,7 @@ const Chat = ({ removeRoom }) => {
             </p>
           </div>
         ))}
+        <div id={"el"} ref={el}></div>
       </div>
       <div className="chat__footer">
         <IconButton>

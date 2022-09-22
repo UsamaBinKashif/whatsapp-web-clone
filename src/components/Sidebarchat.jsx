@@ -31,7 +31,8 @@ const Sidebarchat = ({ addNewChat, id, name }) => {
         </div>
         <div className="sidebarchat--right">
           <h1>{name}</h1>
-          <p> {messages[0]?.message || "no messages found"}</p>
+          <p>  {messages[0]?.message.substring(0, 15)}
+            {messages[0]?.message.length > 15 && "..."}</p>
         </div>
       </div>
     </Link>
