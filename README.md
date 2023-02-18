@@ -53,7 +53,7 @@ Users are able to
 ### Links
 
 - [Solution](https://github.com/UsamaBinKashif/whatsapp-web-clone)
-- [Live Page](https://whatsapp-clone-ubk.firebaseapp.com/)
+- [Live Page](https://whatsapp-clone-ubk.web.app/)
 
 ## My process
 
